@@ -8,11 +8,9 @@ import "./style.css"
  return (
      <div className ={'header'}>
          <div className = 'logo'>
-         {/* <imag src={logo} alt ='logo' /> */}
          <Logo />
          </div>
-       
-          <NavBar />
+           <NavBar />
           </div>
      
  ) 

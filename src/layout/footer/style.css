@@ -1,0 +1,29 @@
+.footer{
+    background-color: #032541;
+    height: 300px;
+    margin-top: 10px;
+}
+
+.category{
+    color: rgb(255, 255, 255);
+    float: left;
+    position: relative;
+    left: 110px;
+    font-size: larger;
+}
+
+.items{
+    color: rgb(255, 255, 255);
+    float:left;
+    position: relative;
+    top:20px;
+}
+.parts{
+margin-top:30px;
+}
+.footerLogo{
+    width: 100px;
+    position: relative;
+    top: 98px;
+    left: 8px;
+}
