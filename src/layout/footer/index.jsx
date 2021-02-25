@@ -9,13 +9,13 @@ const Footer = () => {
         <div className ="footerLogo">  <Logo /></div>
       
         <div className="parts">
-            {links.map( (item,index) =>{
-                return ( <><div className ='category' key={index}>{item.Category }: </div>
-                
-                    <div className="items"> 
-                        {item.items.map( (links,index) => { return <div key={index}>{links}</div>})}
-                    </div>
-                   </> )
+            {links.map( (item,index) => {
+                return ( <>
+                            <div className ='category' key={index}>{item.Category } </div>               
+                                <div className="items"> 
+                                    {item.items.map( (links,index) => { return <div>{links}</div>})}
+                                </div>
+                        </> )
             })}
         </div>
 
