@@ -1,4 +1,6 @@
-import PopularSection from "../../component/main/popular-movie/popular-section";
+import OnTv from "../../component/main/popular-movie/on-tv";
+
+import Streaming from "../../component/main/popular-movie/Streaming";
 import WelcomeComp from "../../component/main/welcome";
 import Header from "../../layout/header"
 
@@ -6,7 +8,8 @@ import Header from "../../layout/header"
       return (
         <>
            <WelcomeComp />
-           <PopularSection />
+           <Streaming />
+           <OnTv></OnTv>
         </>
 
       )

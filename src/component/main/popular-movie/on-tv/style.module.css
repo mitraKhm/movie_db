@@ -1,0 +1,15 @@
+.poster{
+    width: 100%;
+}
+.container{
+    display: flex;
+    margin: 20px;
+}
+.item{
+    flex-direction: row;
+    margin-right: 22px;
+}
+.poster_img{
+    border-radius: 3px;
+    box-shadow:  5px 10px 18px #888888;;
+}

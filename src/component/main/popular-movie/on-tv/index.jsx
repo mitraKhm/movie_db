@@ -2,13 +2,12 @@ import { useState } from "react"
 
 import styles from "./style.module.css"
 
- const PopularSection = () => {
+ const OnTv = () => {
      const [popularMovie , setPopularMovie] = useState([]);
-     const [obj , setObj] = useState({});
 
 const getData = async () => {
   try{
-    const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=893075893339d08fb28f13b616a70bff&language=en-US&page=2')
+    const res = await fetch('https://api.themoviedb.org/3/tv/popular?api_key=893075893339d08fb28f13b616a70bff&language=en-US&page=1')
     if(!res.ok){
       throw new Error (res.status)
      }
@@ -26,7 +25,7 @@ console.log(e);
      return (
        
          <div>
-            <button onClick={getData}>click to see movie</button>
+            <button onClick={getData}>click to see on tv movie</button>
              <div className={styles.container}>
                 {
                 popularMovie.map((i , index )=> {
@@ -50,5 +49,5 @@ console.log(e);
          </div>
      )
  }
- export default PopularSection;
+ export default OnTv;
  
