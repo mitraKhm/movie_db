@@ -4,14 +4,18 @@ import { Route } from 'react-router-dom';
 import Footer from './layout/footer';
 import Header from './layout/header';
 import MainPage from './pages/main-page';
-
+import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
+import store from './store';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store ={store}>
     <Header />
-<MainPage />
-<Footer />
+    <MainPage />
+    <Footer />
+    </Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
