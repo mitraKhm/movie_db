@@ -1,0 +1,29 @@
+.selector_wrapper{
+    display: flex;
+    width: 30%;
+    border: 3px solid #032541;
+    border-radius: 45px;
+}
+
+.select_item {
+    padding: 10px;
+flex-direction: row;
+justify-content: space-evenly;
+
+}
+
+
+.popular{
+    float: left;
+    padding: 15px;
+    margin: 0 20px;
+    font-size: x-large;
+}
+
+
+.selected{
+    background-color: #032541;
+    color: rgb(255, 255, 255);
+    padding: 10px 25px;
+    border-radius: 44%;
+}
