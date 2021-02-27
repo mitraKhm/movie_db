@@ -1,13 +1,27 @@
 import { createReducer } from "@reduxjs/toolkit";
-import ActionType from "./actionType";
 import initState from "./init_state";
+import {TogglePopularTypeAction }from "./action";
+import { createSlice } from '@reduxjs/toolkit'
+// const ReducerApp = createReducer (initState , {
+//     [TogglePopularTypeAction.type ] : (state , action) => ( {
+//         ...state,
+//         popularState :action.payLod
+//     })
+// })
 
-const ReducerApp = createReducer (initState , {
-    [ActionType.TOGGLE_POPULAR_TYPE] : (state , action) => ( {
-        ...state,
-        popularState :action.payLoad
-    })
-})
+ export const ReducerApp = createSlice({
+    name : "togglePop",
+    initialState :{
+        popType : "streaming"
+    },
+    reducers :{
+        togglePopularType : (state , action) =>{
+            state.popType = action.payload
+        }
+    }
 
+}) 
 
-export default ReducerApp;
+export const {togglePopularType} = ReducerApp.actions
+
+export default ReducerApp.reducer;

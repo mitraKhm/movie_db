@@ -1,30 +1,41 @@
 import { useState } from "react"
+import { useSelector } from "react-redux";
 import styles from "./style.module.css"
+import {  STREAMING, ON_TV} from "../selector-wrapper/popType"
 
  const Streaming = () => {
      const [popularMovie , setPopularMovie] = useState([]);
-     const [obj , setObj] = useState({});
 
-const getData = async () => {
-  try{
-    const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=893075893339d08fb28f13b616a70bff&language=en-US&page=2')
-    if(!res.ok){
-      throw new Error (res.status)
+     const types = useSelector(state => state.reducer.popType);
+     const getData = async ( url) => {
+       console.log(url);
+    //   try{
+    //     const res = await fetch(url)
+    //     if(!res.ok){
+    //       throw new Error (res.status)
+    //      }
+    //     const finalRes = await res.json();
+    //     const pop = finalRes.results
+    //     setPopularMovie(pop)
+       
+    //   }catch(e){
+    // console.log(e);
+    //   }
+    }
+     if(types == STREAMING){
+       getData('https://api.themoviedb.org/3/movie/popular?api_key=893075893339d08fb28f13b616a70bff&language=en-US&page=2')
+
+     }else if(types == ON_TV){
+       getData('https://api.themoviedb.org/3/tv/popular?api_key=893075893339d08fb28f13b616a70bff&language=en-US&page=1')
      }
-    const finalRes = await res.json();
-    const pop = finalRes.results
-    setPopularMovie(pop)
-   
-  }catch(e){
-console.log(e);
-  }
-}
+     
+
+
      return (
        
          <div>
-            <button onClick={getData}>click to see streaming movie</button>
              <div className={styles.container}>
-                {
+                { popularMovie &&
                 popularMovie.map((i , index )=> {
                     return (
                       <div className={styles.item}>
