@@ -3,7 +3,9 @@ import { useState } from "react"
 import styles from "./style.module.css"
 
  const OnTv = () => {
+
      const [popularMovie , setPopularMovie] = useState([]);
+     
 
 const getData = async () => {
   try{
