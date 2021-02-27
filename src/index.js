@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route } from 'react-router-dom';
 import Footer from './layout/footer';
 import Header from './layout/header';
-import MainPage from './pages/main-page';
 import { Provider } from 'react-redux';
 import reportWebVitals from './reportWebVitals';
 import store from './store';
+import RouterProvider from './router';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store ={store}>
     <Header />
-    <MainPage />
+ <RouterProvider>
+
+ </RouterProvider>
     <Footer />
     </Provider>
     

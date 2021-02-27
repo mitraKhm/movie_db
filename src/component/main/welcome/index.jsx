@@ -1,4 +1,4 @@
-import SearchComp from "../search";
+import SearchComp from "../../../pages/search";
 
 //import style 
 import styles from "./style.module.css"
