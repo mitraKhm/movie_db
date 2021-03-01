@@ -1,4 +1,6 @@
 const initState = {
-  popularState :"streaming"
+  popularState :"streaming",
+  popularMovie :[],
+  popularLoading : false,
 }
 export default initState;

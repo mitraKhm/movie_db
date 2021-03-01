@@ -6,7 +6,7 @@ import WelcomeComp from "../../component/main/welcome";
       return (
         <>
            <WelcomeComp />
-           <PopularContent />
+           {/* <PopularContent /> */}
         </>
 
       )
