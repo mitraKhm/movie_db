@@ -1,0 +1,14 @@
+.container{
+  display: flex;
+}
+.box{
+    height: 180px;
+    border-width: 2px;
+    border-style: solid;
+    width: 20%;
+    padding: 20px;
+}
+
+.item{
+    padding-right: 40%;
+}

@@ -7,8 +7,8 @@ return (
     <BrowserRouter>
     <Switch>
     {routes.map((route ,index) => (                       
-                        <Route path={route.path} exact={route.exact} key={index}>
-                    { () => <route.component />}                
+                        <Route path={route.path} exact={route.exact} key={index} render ={(e) => <route.component /> }>
+                    { (props) => <route.component/>}                
                                     
                      </Route>
                      ))};
