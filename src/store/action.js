@@ -10,6 +10,8 @@ const CheckSearchSubject = createAction(ActionType.SEARCH_SUBJECT);
 const GetMovieResAction = createAction(ActionType.SEARCH_MOVIE);
 const GetOnTvRes = createAction(ActionType.SEARCH_ON_TV);
 const GetActorRes = createAction(ActionType.SEARCH_ACTOR);
+const ToggleSearchResStateAction =createAction(ActionType.SEARCH_RES_STATE);
+const ShowUiSearchActin = createAction(ActionType.SHOW_UI_RES);
 
 export {
     TogglePopularTypeAction,
@@ -21,4 +23,6 @@ export {
     GetMovieResAction ,
     GetOnTvRes,
     GetActorRes ,
+    ToggleSearchResStateAction,
+    ShowUiSearchActin 
 }

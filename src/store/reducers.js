@@ -1,7 +1,7 @@
 import { createReducer } from "@reduxjs/toolkit";
 import initState from "./init_state";
 import {GetPopularMovieDataAction, SetPopLoading, TogglePopularTypeAction ,GetSearchResult, CheckSearchSubject,
-         GetActorRes,GetMovieResAction,GetOnTvRes}from "./action";
+         GetActorRes,GetMovieResAction,GetOnTvRes, ToggleSearchResStateAction,ShowUiSearchActin }from "./action";
 
 const ReducerApp = createReducer (initState , {
     [TogglePopularTypeAction.type ] : (state , action) => ({
@@ -20,9 +20,7 @@ const ReducerApp = createReducer (initState , {
     [CheckSearchSubject.type] : (state , action) =>({
         ...state,
         searchSubject :action.payload
-    })
-
-    ,
+    }),
     [GetSearchResult.type]: (state , action) => {      
         if (action.payload == null) {
             return ({
@@ -47,7 +45,14 @@ const ReducerApp = createReducer (initState , {
             searchMovieRes: action.payload,
         }),
         
-
+        [ToggleSearchResStateAction.type ] : (state , action) => ({
+            ...state,
+            searchResState  :action.payload
+        }),
+        [ShowUiSearchActin.type ] : (state , action) => ({
+            ...state,
+           showUiRes :[action.payload]
+        }),
 
     
 })

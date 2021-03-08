@@ -29,7 +29,7 @@ const SearchComp = (Props) => {
         if (e.keyCode === 13) {
             const inputValue = e.target.value.replace(/ /g, '%');
             dispatch(GetSearchResult())
-            for (var i = 1; i < 15; i++) {
+            for (var i = 1; i <3; i++) {
                 const url = `https://api.themoviedb.org/3/search/multi?api_key=893075893339d08fb28f13b616a70bff&language=en-US&query=${inputValue}&page=${i}&include_adult=false`;
                 getData(url)
                 dispatch(CheckSearchSubject(e.target.value))

@@ -8,5 +8,7 @@ const initState = {
   searchMovieRes :[],
   searchOnTvRes :[],
   searchActorRes :[],
+  searchResState :'movie',
+  showUiRes:[]
 }
 export default initState;
