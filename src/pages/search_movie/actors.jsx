@@ -1,9 +1,9 @@
 
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import styles from "./style.module.css";
-import logo from "../../assets/pic/logos/notFound.png";
+import { Link, useParams } from "react-router-dom";
 
+import logo from "../../assets/pic/logos/notFound.png";
+import styles from "./style.module.css";
 const Actors = (props) => {
     const baseUrl = 'https://api.themoviedb.org/3';
     const api_key = "?api_key=893075893339d08fb28f13b616a70bff&language=en-US";
@@ -26,7 +26,7 @@ const Actors = (props) => {
       useEffect(() =>{
         getData(actUrl);
       },[]);
-      console.log(actors.length);
+     
 return (
     <div className={styles.cast}>
     <h2>Top Billed Cast</h2>
@@ -41,7 +41,8 @@ return (
        
      </div>
        <div className={styles.header} >
-         <h3>{i.name}</h3>
+         <Link to={`/people/${i.id}`} >
+         <h3>{i.name}</h3></Link>
          <span>{i.character}</span>
        </div>
     </div>

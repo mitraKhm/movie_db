@@ -3,7 +3,8 @@ import MainPage from "../pages/main-page/index";
 import ForbiddenPage from "../pages/forbidden/index";
 import Not_foundPage from "../pages/not-found/index";
 import Search from "../pages/search/index";
-import Complete from "../pages/search_movie/index"
+import Complete from "../pages/search_movie/index";
+import Person from "../pages/person/index"
 
 const routes =[    
     {
@@ -36,14 +37,19 @@ const routes =[
         needAuth:false,
     },
     {
+        name:'PEOPLE',
+        path : paths.PEOPLE,
+        component:Person,
+        exact :true,
+        needAuth:false,
+    },
+    {
         name:'NOT_FOUND',
         path : paths.NOT_FOUND,
         component: Not_foundPage,
         exact :true,
         needAuth:false,
     },
-  
- 
- 
+
 ];
 export default routes;

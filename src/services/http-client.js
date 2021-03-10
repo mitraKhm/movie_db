@@ -16,5 +16,9 @@ const HttpClint = async (url) => {
          }
      
 }
+export {
+  baseUrl,
+  api_key
+}
 
 export default HttpClint;

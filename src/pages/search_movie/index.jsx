@@ -48,7 +48,7 @@ const getData = async ( url) => {
            <div className={styles.back_color}>
          <div className={styles.detail}>
            <div className={styles.poster}>
-             <img style={{borderRadius:"10px"}} src={'https://image.tmdb.org/t/p/original/'+data.poster_path} alt=""/>
+             <img style={{borderRadius:"10px"}} src={'https://image.tmdb.org/t/p/original/'+data.poster_path} alt="poster"/>
            </div>
            <div className={styles.box}>
              <div className={styles.container}> 
