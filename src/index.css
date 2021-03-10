@@ -29,3 +29,26 @@ a:link {
 a:visited {
   text-decoration: none;
 }
+::-webkit-scrollbar {
+  width: 9px;
+  height:9px;
+
+}
+::-webkit-scrollbar-button{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+
+::-webkit-scrollbar-thumb {
+   width: 9px;
+  background: rgb(196, 196, 196); 
+  border-radius:9px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(190, 190, 190);
+  border-radius:9px; 
+}

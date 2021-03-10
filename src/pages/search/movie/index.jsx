@@ -5,7 +5,7 @@ import styles from "../style.module.css"
 
 const Movie = () => {
     const showUI = useSelector(state => state.showUiRes)
-    console.log(showUI[0]);
+
     return(
           <di>
           {showUI[0].map(item => {
@@ -13,10 +13,11 @@ const Movie = () => {
                   <div className={styles.card}> 
                       
                           <div className={styles.image}>
+                          <Link  to ={`/movie/${item.id}`} >
                           {
                           item.poster_path ?  <img className={styles.img} src = {'https://image.tmdb.org/t/p/w92/'+ item.poster_path}></img> : 
-                          <img className={styles.noImg} src={logo} alt="Logo" />
-                          }
+                          <img className={styles.noImg} src={logo} alt="Logo" /> 
+                          }</Link>
                           </div>
                           <div  className={styles.boxRes}>
                             <div className={styles.top_wrapper }>

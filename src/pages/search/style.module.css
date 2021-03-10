@@ -17,9 +17,9 @@
   display: flex;
   max-width: calc(100vw - 82px);
   margin: 25px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
-  box-shadow: 0px 3px 10px rgb(156, 151, 151);
+  box-shadow: 0px 3px 8px rgb(220 220 220);
 }
 
 .noImg{
