@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { ShowUiSearchActin } from "../../store/action";
 import Movie from "./movie";
 import Person from "./person";
-import Tv from "./tv";
+
 
 
 
@@ -13,7 +13,7 @@ const ShowSearchRes = () => {
   if(resState == "movie"){
       return <Movie />
     }else if(resState == "tv"){
-      return <Tv />
+      return  <Movie />
     }else if (resState == "person"){
       return <Person />
     }

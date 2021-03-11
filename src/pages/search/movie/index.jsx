@@ -4,10 +4,10 @@ import logo from  "../../../assets/pic/logos/notFound.png";
 import styles from "../style.module.css"
 
 const Movie = () => {
-    const showUI = useSelector(state => state.showUiRes)
-
+    const showUI = useSelector(state => state.showUiRes);
+    const state = useSelector(state => state.searchResState);
     return(
-          <di>
+          <div>
           {showUI[0].map(item => {
               return(
                   <div className={styles.card}> 
@@ -24,11 +24,11 @@ const Movie = () => {
                                 <div className={styles.title_wrapper }>
                                     <div >
                                         <Link to ={`/movie/${item.id}`} >
-                                    <h3 className={styles.name}> {item.original_title}</h3>
+                                    <h3 className={styles.name}> { (state == "movie") ? item.original_title :item.original_name }</h3>
                                     </Link>
                                     </div>
                             
-                              <span>  {item.release_date}</span>
+                              <span>  { (state == "movie") ?  item.release_date : item.first_air_date }</span>
                               </div>
                             </div>
                              <div className={styles.overView}>
@@ -42,7 +42,7 @@ const Movie = () => {
               
               )
           })}
-          </di>
+          </div>
     )
 }
 export default Movie;

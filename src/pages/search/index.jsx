@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import SearchComp from "../../component/main/search-input";
 import { GetActorRes, GetMovieResAction, GetOnTvRes, ShowUiSearchActin } from "../../store/action";
 import SearchResult from "./searchRes";
 import ShowSearchRes from "./showSearchRes.jsx"
@@ -18,11 +19,14 @@ const SearchPage = () => {
      dispatch(GetMovieResAction(movies));
      dispatch(GetOnTvRes(onTv))
     return (<>
-        <input type='text' placeholder='search movie or ...' />
+    <div style={{backgroundColor:"#03254117"}}>
+    <SearchComp />
+    </div>
+       
     
     <div className={styles.container}>
     <SearchResult />
-       <ShowSearchRes />
+    <ShowSearchRes />
     </div>
       
 

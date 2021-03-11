@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { ShowUiSearchActin, ToggleSearchResStateAction } from "../../store/action";
 import styles from "./style.module.css"
 
@@ -27,21 +28,23 @@ const SearchResult = () => {
   
 return (
     <div className={styles.box}>
-    <h3> search result</h3>
+    <h3 style={{paddingLeft:"20px"}}> search result</h3>
         <div>
-            <div className={styles.container} onClick={() =>handleClick('movie')}>
-                <div className={styles.item} >Movies</div>
-                <div>{movies.length}</div>
+            <div className={ styles.container } onClick={() =>handleClick('movie')}>
+                <div className={(resState == "movie") ?styles.selected:  styles.item} >Movies
+                <div>{movies.length}</div></div>
             </div>
-            <div  className={styles.container}  onClick={() =>handleClick('tv')}>
-                <div className={styles.item} >on tv</div>
-                <div>{onTv.length}</div>
+            <div  className={ styles.container}  onClick={() =>handleClick('tv')}>
+                <div className={ (resState == "tv") ?styles.selected:styles.item} >on tv
+                <div>{onTv.length}</div></div>
             </div>
+       
             <div  className={styles.container} onClick={() =>handleClick('person')}>
-                <div className={styles.item} >people</div>
-                <div>{person.length}</div>
+                <div className={(resState == "person") ?styles.selected: styles.item} >people
+                <div>{person.length}</div></div>
             </div>      
-        </div>        
+        </div>    
+          
   </div>
 )
 }
