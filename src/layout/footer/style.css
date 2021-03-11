@@ -2,28 +2,34 @@
     background-color: #032541;
     height: 300px;
     margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .category{
     color: rgb(255, 255, 255);
-    float: left;
-    position: relative;
-    left: 110px;
-    font-size: larger;
+    margin-right: 30px;
+  
 }
-
+.footerTitle{
+    font-size: larger;
+    font-weight: bolder;
+}
 .items{
     color: rgb(255, 255, 255);
-    float:left;
-    position: relative;
-    top:20px;
 }
 .parts{
-margin-top:30px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: 30px;
 }
 .footerLogo{
     width: 100px;
-    position: relative;
-    top: 98px;
-    left: 8px;
+    margin-right: 30px;
+
+}
+.footerBox{
+
 }

@@ -11,10 +11,12 @@ const Footer = () => {
         <div className="parts">
             {links.map( (item,index) => {
                 return ( <>
-                            <div className ='category' key={index}>{item.Category } </div>               
+                            <div className ='category' key={index}>
+                                 <div className="footerTitle"> {item.Category } </div>            
                                 <div className="items"> 
-                                    {item.items.map( (links,index) => { return <div>{links}</div>})}
+                                    {item.items.map( (links,index) => { return <div className="footerBox">{links}</div>})}
                                 </div>
+                                </div> 
                         </> )
             })}
         </div>

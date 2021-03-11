@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import SearchComp from "../search-inut/index";
+import SearchComp from "../search-input/index";
 
 //import style 
 import styles from "./style.module.css"
