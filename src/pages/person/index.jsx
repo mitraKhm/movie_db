@@ -30,14 +30,13 @@ const Person = () => {
     console.log(movies);
 
 
-      return( <div className={styles.wrapper}>
+      return(
         <div className={styles.container}>
           <div className={styles.poster}>
 
           <img style={{borderRadius:"10px",width: "300px"}} src={'https://image.tmdb.org/t/p/original/'+ actors.profile_path} alt=""/>
           </div>
-          <div>
-            <div className={styles.detail}>
+          <div className={styles.detail}>
               <section>
                 <h2 className={styles.title}> {actors.name}</h2>
                 <p>Biography </p>
@@ -45,11 +44,10 @@ const Person = () => {
                   {actors.biography}
                 </p>
               </section>
-              <section>
+              <div>
                 <h3>Known For </h3>
-                <div>
-                  {movies ? <div>
-              
+                <div className={styles.Known}>
+                  {movies ?
                     <div  className={styles.item}> {movies.map(i => {
                           return (
                      <Link to ={ `/movie/${i.id}`}  >  
@@ -66,15 +64,14 @@ const Person = () => {
                           
                           ) 
                       })}</div>
-    
-                  </div> : ""}
+                 : ""}
                 </div>
 
-              </section>
-              <section></section>
+              </div>
+            
             </div>
-          </div>
+        
         </div>
-      </div>)
+     )
 }
 export default Person;

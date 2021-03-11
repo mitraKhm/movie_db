@@ -38,7 +38,6 @@ return (
                 <div className={ (resState == "tv") ?styles.selected:styles.item} >on tv
                 <div>{onTv.length}</div></div>
             </div>
-       
             <div  className={styles.container} onClick={() =>handleClick('person')}>
                 <div className={(resState == "person") ?styles.selected: styles.item} >people
                 <div>{person.length}</div></div>
