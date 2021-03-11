@@ -50,10 +50,22 @@ import { useEffect } from "react";
                     return (
                       <div className={styles.item}>
                         <div className={styles.poster_img}></div>
-                     
-                       <img src ={'https://image.tmdb.org/t/p/w154/'+ i.poster_path}></img>
-                       <div key={{index}} >{i.original_title} </div>
+                       <img className={styles.img}  src ={'https://image.tmdb.org/t/p/w154/'+ i.poster_path}></img>
+                        <div className={styles.box}>
+                        <div key={{index}} >{i.original_title} </div>
+                        <div>
+                        <svg width="250" height="250">
+                          <circle r="100" cx="125" cy="125" className={styles.track}></circle>
+                          <circle style={{strokeDashoffset:` ${(100 * Math.PI ) - ( i.vote_average/ 100)*(200 * Math.PI )}`}} r="100" cx="125" cy="125" className ={styles.progress}>{
+
+                          }</circle>
+                          </svg>
+
+                        </div>
                        <div> rate: {i.vote_average}</div>
+
+                        </div>
+                      
                        
                       </div>
                     )

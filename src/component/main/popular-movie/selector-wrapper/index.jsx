@@ -24,15 +24,14 @@ const dispatch = useDispatch();
 
     }
 return (
-    <>
+    <div className={styles.container}>
     <div className={styles.popular}> What's Popular </div>
     <div className={styles.selector_wrapper}>
-        <div className={styles.select_item ,(popType === STREAMING)?styles.selected: ""} onClick={() => handlePopType(STREAMING)}> streaming</div>
-        <div className={styles.select_item ,( popType === ON_TV)?styles.selected: ""} onClick={() => handlePopType(ON_TV)}> on tv </div>
-        <div className={styles.select_item}> test1 </div>
-        <div className={styles.select_item}> {popType}</div>
+        <div className={(popType === STREAMING)?styles.selected:styles.items}  onClick={() => handlePopType(STREAMING)}> streaming</div>
+        <div className={ ( popType === ON_TV)?styles.selected: styles.items} onClick={() => handlePopType(ON_TV)}> on tv </div>
+      
     </div>
-    </>
+    </div>
 )
 
 }

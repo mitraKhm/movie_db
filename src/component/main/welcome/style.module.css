@@ -1,4 +1,10 @@
 .welcomeComp{
     height: 300px;
-    background-color: rgb(236, 204, 204);
+    background-color: rgb(19, 19, 51);
+}
+.wel{
+    font-size: 2rem;
+    padding:30px 30px;
+    line-height: .5;
+    color:white;
 }

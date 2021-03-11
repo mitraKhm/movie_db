@@ -30,7 +30,7 @@ const ReducerApp = createReducer (initState , {
         }return(
           {  
             ...state,
-            searchResult :state.searchResult.concat(action.payload)}
+            searchResult : state.searchResult.concat(action.payload)}
         )},
           [GetActorRes.type]: (state , action) => ({
             ...state,
@@ -57,3 +57,4 @@ const ReducerApp = createReducer (initState , {
     
 })
 export default  ReducerApp;
+// state.searchResult.concat(action.payload)
